@@ -2,17 +2,17 @@ package POO;
 
 public class Aviao {
 	
-	private double valor;
+	private double velocidade;
 	private double altura;
 	private double tempo;
 	
 	public Aviao (double h, double t, double v) {
-		valor = v;
+		velocidade = v;
 		tempo = t;
 		altura = h;
 	}
 	public double getAtributos () {
-		double Atributos = altura + tempo + valor;
+		double Atributos = altura*tempo/velocidade;
 		return Atributos;
 	}
 	
