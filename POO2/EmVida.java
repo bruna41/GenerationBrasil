@@ -5,8 +5,11 @@ public class EmVida {
 	public static void main(String[] args) {
 		
 		Cavalo c = new Cavalo ();
-		c.som(false);
-		System.out.println(c.som(true));
+		c.som();
+		Cachorro cao = new Cachorro ();
+		cao.som();
+		Preguiça p = new Preguiça ();
+		p.som();
 
 	}
 
