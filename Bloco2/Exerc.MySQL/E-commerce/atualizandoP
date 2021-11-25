@@ -1,0 +1,2 @@
+update tb_vendas set preco = 1000
+	where id_codigo = 59347;
