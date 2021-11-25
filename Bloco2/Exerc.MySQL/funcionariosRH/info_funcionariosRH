@@ -1,0 +1,10 @@
+use funcionariosrh;
+
+create table info_funcionarios (
+	id_codigo bigint (5) auto_increment,
+    nome varchar (20),
+    cargo varchar (30),
+    email varchar (20),
+    salaario bigint (5),
+    primary key (id_codigo)
+);
