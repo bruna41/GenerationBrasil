@@ -1,0 +1,2 @@
+update info_funcionarios set salaario = 750
+	where id_codigo = 6578;
