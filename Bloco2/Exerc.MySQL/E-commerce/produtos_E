@@ -1,0 +1,6 @@
+insert into tb_vendas (id_codigo, nome, marca, entrega_dias, preco) values (1243, "Televisão", "LG", 20, 2500);
+insert into tb_vendas (id_codigo, nome, marca, entrega_dias, preco) values (5674, "Notebook", "Positivo", 5, 1500);
+insert into tb_vendas (id_codigo, nome, marca, entrega_dias, preco) values (59347, "Celular", "Sansung", 10, 400);
+insert into tb_vendas (id_codigo, nome, marca, entrega_dias, preco) values (666, "Tênis", "Nick", 7, 50);
+
+select * from tb_vendas;
