@@ -1,0 +1,4 @@
+insert into notas (r_a, nome, curso, nota) values (123, "Lucas", "Português", 6.0);
+insert into notas (r_a, nome, curso, nota) values (456, "Ana", "Português", 8.0);
+insert into notas (r_a, nome, curso, nota) values (789, "Julia", "Português", 9.5);
+insert into notas (r_a, nome, curso, nota) values (765, "Roberto", "Português", 10);
