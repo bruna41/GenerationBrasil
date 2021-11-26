@@ -1,9 +1,0 @@
-use bimestre;
-
-create table notas (
-	r_a bigint (3),
-    nome varchar (10),
-    curso varchar (10),
-    nota bigint (2),
-    primary key (r_a)
-);

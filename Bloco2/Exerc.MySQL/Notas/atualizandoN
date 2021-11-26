@@ -1,2 +1,0 @@
-update notas set nota = 5.3
-	where r_a = 765;
