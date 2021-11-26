@@ -1,0 +1,48 @@
+use db_generation_game_online;
+
+create table tb_personagem (
+	codigo bigint (5) auto_increment not null,
+    arqueire varchar (10),
+    guerreire varchar (10),
+    mago varchar (10),
+    primary key (codigo)
+);
+
+use db_generation_game_online;
+
+create table tb_personagem (
+	id bigint (5) auto_increment not null,
+    nome varchar (10),
+	forca bigint (10),
+    habilidade varchar (15),
+	primary key (id)
+);
+
+insert into tb_classe (arqueire, guerreire, mago) values ("sim", null, null);
+insert into tb_classe (arqueire, guerreire, mago) values (null, "sim", null);
+insert into tb_classe (arqueire, guerreire, mago) values (null, null, "sim");
+
+insert into tb_personagem (id, nome, forca, habilidade) values (3, "Lupita", 2300, "Inteligencia");
+insert into tb_personagem (id, nome, forca, habilidade) values (1, "Bianca", 1600, "Agilidade");
+insert into tb_personagem (id, nome, forca, habilidade) values (2, "Luan", 1200, "Camuflagem");
+
+
+select * from tb_personagem 
+	where forca > 2000
+
+
+select * from tb_personagem 
+	where forca > 1000 and forca < 2000
+ 
+  
+select * from tb_personagem 
+	inner join tb_classe on tb_classe.codigo = tb_personagem.id
+  
+ 
+ select * from tb_personagem 
+	where tb_personagem.nome like "%L%"
+  
+  
+  select * from tb_personagem 
+	inner join tb_classe on tb_classe.codigo = tb_personagem.id
+    where tb_classe.arqueire like "%sim%"
