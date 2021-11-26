@@ -1,0 +1,9 @@
+use db_generation_game_online;
+
+create table tb_personagem (
+	codigo bigint (5) auto_increment not null,
+    arqueire varchar (10),
+    guerreire varchar (10),
+    mago varchar (10),
+    primary key (codigo)
+);
