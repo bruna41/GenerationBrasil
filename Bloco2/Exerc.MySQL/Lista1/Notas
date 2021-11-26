@@ -1,0 +1,21 @@
+use bimestre;
+
+create table notas (
+	r_a bigint (3),
+    nome varchar (10),
+    curso varchar (10),
+    nota bigint (2),
+    primary key (r_a)
+);
+
+insert into notas (r_a, nome, curso, nota) values (123, "Lucas", "Português", 6.0);
+insert into notas (r_a, nome, curso, nota) values (456, "Ana", "Português", 8.0);
+insert into notas (r_a, nome, curso, nota) values (789, "Julia", "Português", 9.5);
+insert into notas (r_a, nome, curso, nota) values (765, "Roberto", "Português", 10);
+
+select * from notas where nota < 7;
+
+select * from notas where nota > 7;
+
+update notas set nota = 5.3
+	where r_a = 765;
