@@ -1,0 +1,29 @@
+create datatable funcionariosrh
+
+use funcionariosrh;
+
+create table info_funcionarios (
+	id_codigo bigint (5) auto_increment,
+    nome varchar (20),
+    cargo varchar (30),
+    email varchar (20),
+    salaario bigint (5),
+    primary key (id_codigo)
+);
+
+insert into info_funcionarios (id_codigo, nome, cargo, email, salaario) values (123, "Roberto", "Professor", "robet@email.com", 2500);
+insert into info_funcionarios (id_codigo, nome, cargo, email, salaario) values (345, "Carla", "Limpeza", "carla@email.com", 1800);
+insert into info_funcionarios (id_codigo, nome, cargo, email, salaario) values (6578, "Lucas", "Jovem Aprendiz", "lucas@email.com", 990);
+
+select * from info_funcionarios
+
+select * from info_funcionarios where salaario < 2000;
+
+select * from info_funcionarios where salaario > 2000;
+
+update info_funcionarios set salaario = 750
+	where id_codigo = 6578;
+  
+insert into info_funcionarios (id_codigo, nome, cargo, email, salaario) values (123, "Roberto", "Professor", "robet@email.com", 2500);
+insert into info_funcionarios (id_codigo, nome, cargo, email, salaario) values (345, "Carla", "Limpeza", "carla@email.com", 1800);
+insert into info_funcionarios (id_codigo, nome, cargo, email, salaario) values (6578, "Lucas", "Jovem Aprendiz", "lucas@email.com", 750);
