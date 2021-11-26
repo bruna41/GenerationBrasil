@@ -1,2 +1,0 @@
-select * from tb_personagem 
-	where tb_personagem.nome like "%L%"

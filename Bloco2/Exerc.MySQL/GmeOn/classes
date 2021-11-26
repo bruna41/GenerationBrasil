@@ -1,3 +1,0 @@
-insert into tb_classe (arqueire, guerreire, mago) values ("sim", null, null);
-insert into tb_classe (arqueire, guerreire, mago) values (null, "sim", null);
-insert into tb_classe (arqueire, guerreire, mago) values (null, null, "sim");

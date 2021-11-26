@@ -1,3 +1,0 @@
-insert into tb_personagem (id, nome, forca, habilidade) values (3, "Lupita", 2300, "Inteligencia");
-insert into tb_personagem (id, nome, forca, habilidade) values (1, "Bianca", 1600, "Agilidade");
-insert into tb_personagem (id, nome, forca, habilidade) values (2, "Luan", 1200, "Camuflagem");

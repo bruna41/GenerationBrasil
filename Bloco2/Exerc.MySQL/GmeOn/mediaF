@@ -1,2 +1,0 @@
-select * from tb_personagem 
-	where forca > 1000 and forca < 2000

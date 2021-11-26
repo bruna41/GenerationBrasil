@@ -1,9 +1,0 @@
-use db_generation_game_online;
-
-create table tb_personagem (
-	id bigint (5) auto_increment not null,
-    nome varchar (10),
-	forca bigint (10),
-    habilidade varchar (15),
-	primary key (id)
-);
