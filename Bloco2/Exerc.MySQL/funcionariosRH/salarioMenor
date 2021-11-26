@@ -1,1 +1,0 @@
-select * from info_funcionarios where salaario < 2000;
