@@ -1,0 +1,45 @@
+create database db_farmacia_do_bem;
+
+use db_farmacia_do_bem;
+create table tb_categoria (
+	id_categoria int not null auto_increment,
+    higiene varchar (30),
+    cosmeticos varchar (30),
+    medicamentos varchar (30),
+    primary key (id_categoria)
+);
+
+use db_farmacia_do_bem;
+create table tb_produtos (
+	id_produtos int not null,
+    nome varchar (30),
+    estoque int,
+    validade date,
+    preco float,
+    fk_categoria int not null,
+    primary key (id_produtos),
+    foreign key (fk_categoria) references tb_categoria (id_categoria)
+    
+);
+
+insert into tb_categoria (higiene, cosmeticos, medicamentos) values ("Sim", "Não", "Não");
+insert into tb_categoria (higiene, cosmeticos, medicamentos) values ("Não", "Sim", "Não");
+insert into tb_categoria (higiene, cosmeticos, medicamentos) values ("Não", "Não", "Sim");
+
+insert into tb_produtos (id_produtos, nome, estoque, validade, preco, fk_categoria) values (24, "Shampoo-Dove", 15, 20300623, 15.00, 1);
+insert into tb_produtos (id_produtos, nome, estoque, validade, preco, fk_categoria) values (50, "Clopidogrel", 40, 20220412, 38.90, 3);
+insert into tb_produtos (id_produtos, nome, estoque, validade, preco, fk_categoria) values (36, "Dorflex", 40, 20250903, 15.00, 3);
+insert into tb_produtos (id_produtos, nome, estoque, validade, preco, fk_categoria) values (15, "Perfome-Oboticario", 24, 20350815, 60.00, 2);
+insert into tb_produtos (id_produtos, nome, estoque, validade, preco, fk_categoria) values (25, "Sabonete", 50, 20290608, 2.00, 1);
+insert into tb_produtos (id_produtos, nome, estoque, validade, preco, fk_categoria) values (10, "Batom-Avon", 21, 20420623, 5.00, 2);
+
+select * from tb_produtos where preco > 50;
+
+select * from tb_produtos where preco between 3 and 60;
+
+select * from tb_produtos where nome like "%B%";
+
+select * from tb_categoria inner join tb_produtos on tb_categoria.id_categoria = tb_produtos.fk_categoria;
+
+select * from tb_produtos inner join tb_categoria on tb_categoria.id_categoria = tb_produtos.fk_categoria
+	where tb_categoria.id_categoria like 1;
