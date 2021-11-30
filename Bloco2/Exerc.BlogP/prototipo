@@ -1,0 +1,31 @@
+create database bp_prototipo;
+
+use bp_prototipo;
+create table tb_usuario (
+	id_usuario int not null,
+    email varchar (20) not null,
+    nome varchar (10) not null,
+    usuario varchar (30)default 'Maquina',
+    senha varchar(8),
+    url_perfil varchar (100), 
+    primary key (id_usuario)
+);
+
+create table tb_tema (
+	id_tema int not null,
+    info varchar (200),
+    primary key (id_tema)
+);
+
+create table tb_postagens (
+	id_post int not null,
+    titulo varchar (30),
+    descricao varchar (1000),
+    url varchar (100),
+    data_post date,
+    fk_usuario int not null,
+    fk_tema int not null,
+    foreign key (fk_tema) references tb_tema (id_tema),
+    foreign key (fk_usuario) references tb_usuario (id_usuario),
+    primary key (id_post)
+);
